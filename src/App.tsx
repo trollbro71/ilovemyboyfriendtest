@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <GLBViewer url="/model.glb" />
+        <GLBViewer url={`${process.env.PUBLIC_URL}/model.glb`} />
       </header>
     </div>
   );
