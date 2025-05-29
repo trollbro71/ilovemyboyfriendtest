@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ilovemyboyfriend/static/css/main.e0614287.css",
+    "main.js": "/ilovemyboyfriend/static/js/main.c7ef7fd0.js",
+    "static/js/453.1983e468.chunk.js": "/ilovemyboyfriend/static/js/453.1983e468.chunk.js",
+    "static/media/header.jpg": "/ilovemyboyfriend/static/media/header.284d585b53d49c968964.jpg",
+    "index.html": "/ilovemyboyfriend/index.html",
+    "main.e0614287.css.map": "/ilovemyboyfriend/static/css/main.e0614287.css.map",
+    "main.c7ef7fd0.js.map": "/ilovemyboyfriend/static/js/main.c7ef7fd0.js.map",
+    "453.1983e468.chunk.js.map": "/ilovemyboyfriend/static/js/453.1983e468.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0614287.css",
+    "static/js/main.c7ef7fd0.js"
+  ]
+}
