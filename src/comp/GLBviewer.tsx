@@ -13,7 +13,7 @@ const GLBModel = ({ url }: { url: string }) => {
 
   useFrame(() => {
     if (groupRef.current) {
-      groupRef.current.rotation.y += 0.001;
+      groupRef.current.rotation.y += 0.02;
     }
   });
 
@@ -24,24 +24,27 @@ useGLTF.preload('/your-model.glb');
 
 export const GLBViewer = ({ url }: GLBViewerProps) => {
   return (
-    <Canvas camera={{ position: [0, 0, 1], fov: 50 }} style={{ width: '100%', height: '500px' }}>
-      {/* Bright ambient light to fill all shadows */}
-      <ambientLight intensity={1.5} />
+    <Canvas camera={{ position: [0, 0, 1], fov: 50 }} style={{ width: '100%', height: '700px' }}>
+      <ambientLight intensity={1} />
 
       {/* Key light from front-top-right */}
       <directionalLight position={[5, 5, 5]} intensity={2} castShadow />
-
       {/* Fill light from back-bottom-left */}
-      <directionalLight position={[-5, -5, -5]} intensity={1.5} />
-
+      <directionalLight position={[-5, -5, -5]} intensity={5} />
       {/* Optional helper light from top */}
-      <directionalLight position={[0, 10, 0]} intensity={1} />
+      <directionalLight position={[0, 2, 5]} intensity={5} />
 
       <Suspense fallback={null}>
         <GLBModel url={url} />
       </Suspense>
 
-      <OrbitControls enableZoom enablePan />
+      <OrbitControls 
+      enableZoom={false}
+      zoomSpeed={1.0}
+      minDistance={0.5}
+      maxDistance={10}
+      enablePan={false}
+/>
     </Canvas>
   );
 };

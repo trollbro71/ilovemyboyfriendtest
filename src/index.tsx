@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Header photoUrl="https://example.com/photo.jpg" />
+    <Header />
     <App />
   </React.StrictMode>
 );
